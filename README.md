@@ -30,7 +30,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Some Screenshots from app
 
-| <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">  | <img width="400" height="300" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">  |
+| <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">  | <img width="400" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">  |
 |:-:|:-:|
-|<img width="400" height="300" alt="Product details" src="./src/assets/app_screenshots/gadgetStore_details.png">   |  <img width="400" height="300" alt="Cart" src="./src/assets/app_screenshots/gadgetStore_cart.png">  |
-|  <img width="400" height="300" alt="Product form" src="./src/assets/app_screenshots/gadgetStore_actionForm.png">  |   |
+|<img width="400" alt="Product details" src="./src/assets/app_screenshots/gadgetStore_details.png">   |  <img width="400" alt="Cart" src="./src/assets/app_screenshots/gadgetStore_cart.png">  |
+|  <img width="400" alt="Product form" src="./src/assets/app_screenshots/gadgetStore_actionForm.png">  |   |
