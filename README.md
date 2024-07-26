@@ -29,14 +29,8 @@ Generate yoru map ID and provide it in map.component.htm file. How to get Map ID
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 ## Some Screenshots from app
-<p>
-    <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">
-    <img width="400" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">
-</p>
-<p>
-    <img width="400" alt="Product details" src="./src/assets/app_screenshots/gadgetStore_details.png">
-    <img width="400" alt="Cart" src="./src/assets/app_screenshots/gadgetStore_cart.png">
-</p>
-<p>
-    <img width="400" alt="Product form" src="./src/assets/app_screenshots/gadgetStore_actionForm.png">
-</p>
+
+| <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">  | <img width="400" height="300" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">  |
+|:-:|:-:|
+|<img width="400" height="300" alt="Product details" src="./src/assets/app_screenshots/gadgetStore_details.png">   |  <img width="400" height="300" alt="Cart" src="./src/assets/app_screenshots/gadgetStore_cart.png">  |
+|  <img width="400" height="300" alt="Product form" src="./src/assets/app_screenshots/gadgetStore_actionForm.png">  |   |
