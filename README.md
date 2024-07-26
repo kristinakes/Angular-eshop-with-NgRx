@@ -28,6 +28,6 @@ Generate yoru map ID and provide it in map.component.htm file. How to get Map ID
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## Some Screenshot from app
+## Some Screenshots from app
 <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">
 <img width="400" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">
