@@ -30,6 +30,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Some Screenshots from app
 <p>
-    <img width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">
-    <img width="400" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">
+    <img position="top" width="400" alt="Front page" src="./src/assets/app_screenshots/gadgetStore_home.png">
+    <img position="top" width="400" alt="Products" src="./src/assets/app_screenshots/gadgetStore_products.png">
 </p>
