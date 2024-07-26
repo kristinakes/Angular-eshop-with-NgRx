@@ -1,0 +1,65 @@
+<div class="container p-4 form text-center">
+  <form
+    action=""
+    class="d-flex flex-column justify-content-center align-items-center"
+    [formGroup]="reactiveProductForm"
+    (ngSubmit)="onProductSubmit()"
+  >
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" readonly="true" />
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["title"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Short description</mat-label>
+      <textarea matInput formControlName="short_description" ></textarea>
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["short_description"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Long description</mat-label>
+      <textarea matInput formControlName="long_description"></textarea>
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["long_description"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Price</mat-label>
+      <input matInput formControlName="price" type="number" />
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["price"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Year</mat-label>
+      <input matInput formControlName="year" type="number"/>
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["year"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>RAM memory</mat-label>
+      <input matInput formControlName="RAM" />
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["RAM"])
+      }}</mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Warranty period</mat-label>
+      <input matInput formControlName="warranty_period" />
+      <mat-error>{{
+        checkForInputErrors(reactiveProductForm.controls["warranty_period"])
+      }}</mat-error>
+    </mat-form-field>
+    <div class="container text-center">
+      <button mat-stroked-button color="primary" class="m-2" (click)="onCancel()">CANCEL</button>
+      
+      <button type="submit" mat-raised-button color="primary" class="m-2" [disabled]="!reactiveProductForm.valid">
+       {{data.action | uppercase}}
+      </button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,25 @@
+<mat-card
+  class="container d-flex flex-column flex-md-row justify-content-between align-items-center overflow-x-auto m-2"
+>
+  <mat-card-content class="w-25">
+    <img mat-card-image class="img-fluid" [src]="item.image_url" alt={{item.title}} [routerLink]="['/products', item.id]"/>
+  </mat-card-content>
+
+  <mat-card-content>
+    <h4 appSetBlueText [routerLink]="['/products', item.id]">{{ item.title }}</h4>
+    <div class="d-flex flex-md-column align-items-start fw-bolder">
+      <p>Year: {{ item.year }}</p>
+      <p>RAM memory: {{ item.RAM }}</p>
+      <p>Warranty: {{ item.warranty_period }}</p>
+      <p>Price: {{ item.price }}&#8364;</p>
+    </div>
+  </mat-card-content>
+  <mat-card-content>
+    <app-cart-item-buttons [product]="item"></app-cart-item-buttons>
+  </mat-card-content>
+  <mat-card-content>
+    <p class="fw-bold fs-5">
+      Total: {{ item.totalPrice | number: "1.2-2" }}&#8364;
+    </p>
+  </mat-card-content>
+</mat-card>

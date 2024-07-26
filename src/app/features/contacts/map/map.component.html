@@ -1,0 +1,6 @@
+<google-map height="330px" width="100%" [options]="options" mapId="DEMO_MAP_ID">
+  @for(position of markerPositions; track position) {
+  <map-advanced-marker [position]="position"></map-advanced-marker>
+
+  }
+</google-map>

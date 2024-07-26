@@ -1,0 +1,14 @@
+@if(cartTotalQuantity$ | async;) {
+  <div class="container d-flex justify-content-between m-4">
+    <h4 appSetBlueText>Shopping cart</h4>
+    <h4 appSetBlueText>Total: {{ cartTotalAmount$ | async | number: "1.2-2" }} &#8364;</h4>
+  </div>
+  @for(item of cartItems$ |async; track item.id) {
+  <app-cart-item-card [item]="item"></app-cart-item-card>
+
+} } @else {
+<app-page-message
+  ><p>Your shopping cart is empty.</p>
+  <p>Go to <a class="text-reset" routerLink="/products">Products Page</a></p>
+</app-page-message>
+}

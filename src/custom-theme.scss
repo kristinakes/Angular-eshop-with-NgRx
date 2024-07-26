@@ -1,0 +1,52 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+// Available color palettes: https://material.io/design/color/
+$custom-accent-palette: (
+  50: #fcf9e3,
+  100: #f8eeb8,
+  200: #f5e38b,
+  300: #f2da5c,
+  400: #f1d038,
+  500: #f1c722,
+  600: #f1ba19,
+  700: #f1a810,
+  800: #f29806,
+  900: #f27a00,
+  contrast: (
+    50: #000,
+    100: #000,
+    200: #000,
+    300: #000,
+    400: #000,
+    500: #000,
+    600: #000,
+    700: #000,
+    800: #000,
+    900: #000,
+  ),
+);
+
+$shopTheme-primary: mat.define-palette(mat.$indigo-palette, 500);
+$shopTheme-accent: mat.define-palette(mat.$gray-palette, 200);
+$shopTheme-secondary: mat.define-palette($custom-accent-palette, 200);
+$shopTheme-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object.
+$shopTheme: mat.define-light-theme(
+  (
+    color: (
+      primary: $shopTheme-primary,
+      secondary: $shopTheme-secondary,
+      accent: $shopTheme-accent,
+      warn: $shopTheme-warn,
+    ),
+    typography: mat.define-typography-config(),
+    density: 0,
+  )
+);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+@include mat.all-component-themes($shopTheme);

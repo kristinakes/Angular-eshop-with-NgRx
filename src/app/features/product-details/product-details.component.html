@@ -1,0 +1,43 @@
+<div 
+  class="d-flex flex-column flex-md-row justify-content-evenly align-items-center w-full p-4"
+>
+  @if (product$ | async; as product) {
+  <mat-card
+    class="container d-flex flex-column-reverse flex-md-row justify-content-center align-items-center p-3"
+  >
+    <mat-card-content class="w-100 w-sm-50">
+      <h4 appSetBlueText>{{ product.title }}</h4>
+      <p class="text-dark-emphasis fs-7 lh-lg">
+        {{ product.long_description }}
+      </p>
+      <div
+        class="container d-flex flex-row justify-content-start align-items-center p-0 mx-0 fs-5 fw-bold"
+      >
+        <p class="me-3">Year: {{ product.year }}</p>
+        <p>RAM: {{ product["RAM"] }}</p>
+      </div>
+      <div>
+        <p class="fw-bold">Features:</p>
+        <ul>
+          @for(feature of product.features; track feature) {
+          <li>{{ feature }}</li>
+          }
+        </ul>
+      </div>
+      <p class="fs-5 fw-bold">Price: {{ product.price }}&#8364;</p>
+      <mat-card-actions align="start" class="p-0">
+        <app-action-menu [product]="product"></app-action-menu>
+        <app-cart-item-buttons [productId]="product.id"  [product]="product"></app-cart-item-buttons>
+      </mat-card-actions>
+    </mat-card-content>
+    <mat-card-content class="w-100 w-sm-50">
+      <img
+        mat-card-image
+        [src]="product.image_url"
+        [alt]="product.title"
+        class="d-block mx-auto img-fluid"
+      />
+    </mat-card-content>
+  </mat-card>
+  }
+</div>

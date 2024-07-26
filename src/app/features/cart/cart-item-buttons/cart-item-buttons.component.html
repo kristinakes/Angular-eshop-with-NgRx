@@ -1,0 +1,25 @@
+<div class="d-flex flex-row justify-content-center align-items-center mx-3">
+  <button
+    mat-mini-fab
+    disableRipple="true"
+    [disabled]="(itemQuantity$ | async) === undefined"
+    color="basic"
+    class="rounded shadow-none border border-2"
+    (click)="removeFromCart(product.id)"
+  >
+    @if((itemQuantity$ | async) !== 2) {
+      <mat-icon color="primary">delete</mat-icon>
+    } @else {
+    <mat-icon color="primary">remove</mat-icon>}
+  </button>
+  <p class="fw-bold fs-2 p-4 m-0">{{ (itemQuantity$ | async) || 0 }}</p>
+  <button
+    mat-mini-fab
+    disableRipple="true"
+    color="primary"
+    class="rounded shadow-none"
+    (click)="addToCart(product)"
+  >
+    <mat-icon>add</mat-icon>
+  </button>
+</div>

@@ -1,0 +1,12 @@
+<div class="d-flex flex-column flex-md-row justify-content-evenly align-items-center w-full p-4">
+  <div class="m-2">
+    <h2 class="mb-5 fw-bold">{{ title }}</h2>
+    <p class="m-3">{{adress}}</p>
+    <app-map></app-map>
+  </div>
+  <div class="d-flex flex-wrap flex-row flex-md-column flex-md-wrap justify-content-center justify-content-md-between align-items-center p-2">
+    @for(contact of contacts; track contact.title) {
+    <app-yellow-card [feature]="contact"></app-yellow-card>
+    }
+  </div>
+</div>

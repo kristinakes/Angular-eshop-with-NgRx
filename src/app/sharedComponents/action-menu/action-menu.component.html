@@ -1,0 +1,33 @@
+<button
+  mat-stroked-button
+  color="primary"
+  [matMenuTriggerFor]="menu"
+  class="m-2 fs-6 p-3"
+>
+  MENU
+</button>
+<mat-menu #menu="matMenu">
+  <div
+    class="d-flex flex-column justify-content-strech align-content-center p-2"
+  >
+    <button
+      mat-flat-button
+      color="accent"
+      disableRipple="true"
+      class="m-1 fw-normal"
+      (click)="openDialog()"
+    >
+      Edit
+    </button>
+    <button
+      mat-flat-button
+      color="accent"
+      disableRipple="true"
+      class="m-1 fw-normal"
+      routerLink="/products"
+      (click)="onProductDelete(this.product.id)"
+    >
+      Delete
+    </button>
+  </div>
+</mat-menu>

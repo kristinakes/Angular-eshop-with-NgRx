@@ -1,0 +1,44 @@
+<header class="position-sticky top-0 z-3">
+  <nav>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <a
+          class="d-flex justify-content-center align-items-center"
+          routerLink="/"
+        >
+          <mat-icon>laptop</mat-icon>
+          <span>Gadget Store</span>
+        </a>
+        <span class="example-spacer"></span>
+        <div class="d-none d-sm-block">
+          <a routerLink="/"><span>Home</span></a>
+          <a routerLink="/products"><span>Products</span></a>
+          <a routerLink="/contacts"><span>Contact Us</span></a>
+          <a routerLink="/cart"
+            ><span>Cart ({{ cartTotalQuantity$ | async }})</span></a
+          >
+        </div>
+        <div class="d-sm-none">
+          <button
+            mat-icon-button
+            [matMenuTriggerFor]="menu"
+            disableRipple="true"
+            aria-label="Example icon-button with a menu"
+          >
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <div
+              class="d-flex flex-column justify-content-center align-items-end m-4 gap-3"
+            >
+              <a routerLink="/">Home</a>
+              <a routerLink="/products">Products</a>
+              <a routerLink="/contacts">Contact Us</a>
+              <a routerLink="/cart">Cart ({{ cartTotalQuantity$ | async }})</a>
+            </div>
+          </mat-menu>
+        </div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </nav>
+</header>

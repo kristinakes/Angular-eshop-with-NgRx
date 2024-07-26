@@ -1,0 +1,22 @@
+section {
+  background-color: var(--shopYellow);
+  height: 450px;
+}
+
+img {
+  width: auto;
+  height: 400px;
+}
+
+button {
+  margin-right: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
